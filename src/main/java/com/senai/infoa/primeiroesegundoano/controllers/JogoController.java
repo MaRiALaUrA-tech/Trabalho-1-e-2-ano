@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,5 +23,12 @@ public class JogoController {
     public List<Jogo> listarTodos(){
         return jogoService.listarTodos();
     }
+
+     @PostMapping("/salvar")
+     public Jogo salvar(@RequestBody Jogo jogo) {
+        return jogoService.salvar(jogo);
+ }
+
+
 
 }
