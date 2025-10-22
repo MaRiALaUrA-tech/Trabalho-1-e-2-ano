@@ -29,15 +29,20 @@ public class Jogo{
     @Column(name="tamanho")
     private double  tamanho;
 
+    @Column(name="descricao")
+    private String descricao;
+
     public Jogo (){}
 
-    public Jogo(String nomeJogo, String genero, LocalDate dataLancamento, double tamanho){
+    public Jogo(String nomeJogo, String genero, LocalDate dataLancamento, double tamanho, String descricao){
         this.nomeJogo = nomeJogo;
         this.genero = genero;
         this.dataLancamento = dataLancamento;
         this.tamanho = tamanho;
+        this.descricao = descricao;
     }
 
+    
     public Integer getJogoId() {
         return jogoId;
     }
@@ -76,6 +81,14 @@ public class Jogo{
 
     public void setTamanho(double tamanho) {
         this.tamanho = tamanho;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 
     
