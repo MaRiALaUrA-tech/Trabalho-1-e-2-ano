@@ -1,6 +1,7 @@
 package com.senai.infoa.primeiroesegundoano.models;
 
 import java.time.LocalDate;
+
 import jakarta.persistence.Id;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
@@ -12,7 +13,7 @@ import jakarta.persistence.GenerationType;
 @Table(name="jogo")
 public class Jogo{
     @Id      
-    @GeneratedValue(strategy=GenarationType.IDENTITY)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name="jogo_id")
     private Integer jogoId;
 
